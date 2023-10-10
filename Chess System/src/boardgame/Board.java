@@ -19,6 +19,11 @@ public Piece piece(int rows, int columns){
         return pieces[position.getRow()][position.getColumn()];
     }
 
+    public void placePiece(Piece inputPiece, Position inputPosition){
+        this.pieces[inputPosition.getRow()][inputPosition.getColumn()] = inputPiece;
+        inputPiece.position = inputPosition;
+    }
+
 //Special methods Getters and Setters
     public int getRows() {
         return rows;
